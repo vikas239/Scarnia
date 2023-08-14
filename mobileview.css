@@ -1,0 +1,116 @@
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 1070px) {
+    .header a {
+        float: none;
+        text-align: left;
+    }
+
+    .header-right {
+        float: none;
+    }
+
+    header #menu-btn {
+        display: block;
+    }
+
+    .header-right {
+        position: fixed;
+        width: 100vw;
+        min-height: 100vh;
+        background: blue;
+        top: 83px;
+        left: -180%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        margin: 0;
+        line-height: 40px;
+        transition: all .5s;
+        padding: 30px;
+        z-index: 2;
+    }
+
+    .header-right a {
+        font-size: 20px;
+    }
+    .header-right a:hover {
+        color: brown;
+    }
+
+    .header .active {
+        background-color: white;
+        color: aqua;
+    }
+
+    .active,
+    a:hover {
+        border: none;
+        color: aqua;
+    }
+
+    .header-right.show {
+        left: 0;
+    }
+
+    .header-right input[type=text] {
+        margin-right: 0;
+        max-width: 280px;
+    }
+
+
+}
+
+/* media */
+
+@media(max-width: 700px) {
+    .footerNav ul {
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .container {
+        justify-content: space-between;
+    }
+    .scards {
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .scard {
+        width: 220px;
+    }
+
+    .service .container .part1,
+    .service .container .part2 {
+        flex-direction: column;
+    }
+    .service .container .part1 .sub-part,
+    .service .container .part2 .card {
+        flex-basis: 100%;
+    }
+    .service .container .part1 .sub-part:nth-child(2){
+        order: 1;
+    }
+    .service .container .part1 .sub-part:nth-child(1){
+        order: 2;
+    }
+    .hero {
+        min-height: 500px;
+        height: auto;
+    }
+    .home {
+        width: auto;
+        padding: 50px 20px;
+    }
+}
+
